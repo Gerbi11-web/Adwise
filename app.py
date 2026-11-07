@@ -63,7 +63,7 @@ with st.form("campaign_form"):
     with b:
         country = st.text_input("Target country", placeholder="e.g. Nigeria")
         city = st.text_input("Target city or area", placeholder="e.g. Lagos")
-        min_age, max_age = st.slider("Adult audience age range", min_value=18, max_value=65, value=(25, 45))
+        min_age, max_age = st.slider("Adult audience age range", min_value=18, max_value=80, value=(25, 45))
         preference = st.selectbox("Platform preference", ["Let AdWise choose"] + sorted(set(sum(OBJECTIVES.values(), [])) | {"LinkedIn Ads", "Pinterest Ads", "YouTube Ads", "Google Display"}))
     submitted = st.form_submit_button("Build my advertising strategy", type="primary", use_container_width=True)
 
